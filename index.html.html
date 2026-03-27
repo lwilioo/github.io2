@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Expeditionist | Professional Hiking Club</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "error": "#ba1a1a",
+                "secondary": "#79573f",
+                "on-secondary": "#ffffff",
+                "inverse-on-surface": "#f4f1e8",
+                "tertiary-fixed": "#ffddb6",
+                "inverse-surface": "#31312b",
+                "primary": "#17340e",
+                "on-surface-variant": "#43483f",
+                "surface-tint": "#47673a",
+                "on-error": "#ffffff",
+                "primary-container": "#2d4b22",
+                "surface-container-high": "#ebe8df",
+                "on-primary-container": "#97bb87",
+                "surface-container-highest": "#e5e2da",
+                "secondary-fixed-dim": "#eabda0",
+                "tertiary": "#3e2a0f",
+                "on-surface": "#1c1c17",
+                "on-secondary-fixed": "#2d1604",
+                "on-primary-fixed-variant": "#304e25",
+                "outline-variant": "#c3c8bc",
+                "primary-fixed": "#c8edb5",
+                "on-tertiary-fixed-variant": "#594325",
+                "on-primary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "on-error-container": "#93000a",
+                "on-background": "#1c1c17",
+                "on-tertiary-container": "#ccac87",
+                "surface-container": "#f1eee5",
+                "error-container": "#ffdad6",
+                "surface": "#fcf9f0",
+                "on-primary-fixed": "#052101",
+                "background": "#fcf9f0",
+                "outline": "#73796e",
+                "on-secondary-container": "#7a5840",
+                "surface-dim": "#dddad1",
+                "surface-variant": "#e5e2da",
+                "tertiary-fixed-dim": "#e2c19b",
+                "inverse-primary": "#add19b",
+                "tertiary-container": "#564023",
+                "secondary-fixed": "#ffdcc6",
+                "on-tertiary": "#ffffff",
+                "primary-fixed-dim": "#add19b",
+                "on-tertiary-fixed": "#291801",
+                "surface-container-low": "#f6f3ea",
+                "on-secondary-fixed-variant": "#5f402a",
+                "secondary-container": "#ffd1b3",
+                "surface-bright": "#fcf9f0"
+              },
+              fontFamily: {
+                "headline": ["Space Grotesk"],
+                "body": ["Work Sans"],
+                "label": ["Work Sans"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+<style>
+        .topo-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10Q50 50 100 10T200 10Q250 50 300 10T400 10M10 50Q50 90 100 50T200 50Q250 90 300 50T400 50M10 90Q50 130 100 90T200 90Q250 130 300 90T400 90' stroke='%232d4b22' stroke-width='0.5' fill='none' opacity='0.1'/%3E%3C/svg%3E");
+        }
+        .wood-button {
+            background: linear-gradient(135deg, #79573f 0%, #5f402a 100%);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 2px 4px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="w-full sticky top-0 z-50 bg-[#fcf9f0]/90 dark:bg-[#17340e]/90 backdrop-blur-md shadow-[0_20px_40px_rgba(45,75,34,0.08)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-2xl font-bold text-[#17340e] dark:text-[#fcf9f0] flex items-center gap-2 font-['Space_Grotesk'] font-bold tracking-tight">
+<span class="material-symbols-outlined text-3xl">landscape</span>
+<span>Expeditionist</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] font-bold tracking-tight">
+<a class="text-[#17340e] dark:text-[#fcf9f0] border-b-2 border-[#79573f] pb-1" href="#">Home</a>
+<a class="text-[#43483f] dark:text-[#e5e2da] hover:text-[#2d4b22] transition-colors" href="#">Routes</a>
+<a class="text-[#43483f] dark:text-[#e5e2da] hover:text-[#2d4b22] transition-colors" href="#">Checklist</a>
+<a class="text-[#43483f] dark:text-[#e5e2da] hover:text-[#2d4b22] transition-colors" href="#">Gallery</a>
+<a class="text-[#43483f] dark:text-[#e5e2da] hover:text-[#2d4b22] transition-colors" href="#">Schedule</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-[#2d4b22] dark:text-[#add19b] hover:bg-[#f1eee5] dark:hover:bg-[#2d4b22] rounded-sm transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+<div class="bg-[#f1eee5] dark:bg-[#2d4b22] h-[1px] w-full absolute bottom-0"></div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center justify-center overflow-hidden">
+<img alt="Misty mountain peaks at sunrise" class="absolute inset-0 w-full h-full object-cover" data-alt="dramatic wide angle shot of jagged mountain peaks piercing through a thick layer of morning mist at golden hour with rugged textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAskyMXRTcQwi0rFyBqrXKanSUH8TIwYhmrOtub67CsWg0mACfD6J1rdD5ig_PPpyQUYTbDLB1kEPr14ME9cCA_UKgb6lJ0gaF7oW8PdNHaun0LKKNcHtY1EBx2fzhibatASWV6Z5D5FmRUaNNq1keKfWpv8qOuKkNZyu1ipqYC48Va_skrGHse2Gv0X7OJyflnaBV4Dz4AlBDQcX-0Vgczw4fbZ-BbBJ2UtnnofWuC98cq1G07q1FnRZy_Kqv80wo3daiAjHkSPY4v"/>
+<div class="absolute inset-0 bg-primary/40 backdrop-multiply"></div>
+<div class="relative z-10 text-center px-6 max-w-5xl">
+<span class="text-secondary-fixed font-headline font-bold tracking-[0.3em] uppercase mb-4 block">Est. 1994 • Field Research</span>
+<h1 class="text-white font-headline font-bold text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tighter mb-8 drop-shadow-2xl">
+                    EXPEDITIONIST:<br/>CHASING THE<br/>UNKNOWN
+                </h1>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="wood-button px-10 py-5 text-on-secondary font-headline font-bold uppercase tracking-widest flex items-center gap-3 transition-transform hover:-translate-y-1 active:scale-95">
+                        Start Exploration
+                        <span class="material-symbols-outlined">north_east</span>
+</button>
+<button class="px-10 py-5 bg-surface/10 backdrop-blur-md border border-white/20 text-white font-headline font-bold uppercase tracking-widest hover:bg-surface/20 transition-all">
+                        View Logbooks
+                    </button>
+</div>
+</div>
+<!-- Bottom Bleed Texture -->
+<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-surface to-transparent"></div>
+</section>
+<!-- Club Info Section -->
+<section class="py-24 px-8 relative overflow-hidden topo-bg">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Left Column: Narrative -->
+<div class="lg:col-span-7 space-y-12">
+<div class="space-y-6">
+<div class="flex items-center gap-4 text-secondary font-headline font-bold uppercase tracking-tighter">
+<span class="h-px w-12 bg-secondary"></span>
+                            The Foundation
+                        </div>
+<h2 class="text-5xl font-headline font-bold text-primary tracking-tight">Built for the Rugged, Designed for Discovery.</h2>
+<p class="text-xl text-on-surface-variant font-light leading-relaxed max-w-2xl">
+                            The Expeditionist Hiking Club isn't just a school organization; it's a legacy of exploration. Founded on the principle that true learning happens beyond the classroom walls, we traverse the most challenging terrains to foster leadership, resilience, and environmental stewardship.
+                        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container-low p-8 border-l-4 border-primary">
+<h3 class="font-headline font-bold text-primary text-xl mb-3">Our Mission</h3>
+<p class="text-on-surface-variant leading-relaxed">To equip students with technical mountaineering skills while cultivating a profound respect for the wild landscapes we inhabit.</p>
+</div>
+<div class="bg-surface-container-low p-8 border-l-4 border-secondary">
+<h3 class="font-headline font-bold text-secondary text-xl mb-3">Legacy Stats</h3>
+<p class="text-on-surface-variant leading-relaxed">Over 450 summits reached, 12,000 miles mapped, and a community of 2,000+ alumni since inception.</p>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden h-80 group">
+<img alt="Hikers on a ridge" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="trio of hikers with vintage equipment standing on a narrow rocky ridge overlooking a vast green valley under soft diffused light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmxvNhgYzWbBTN-pWxuOdYgV9YFqKubp3Rv1-JyUdzdbqMbp8PdvhouUxacuM79tx12VaowDsVOxoHHbmCRdrb2hFsiFtJig8o8QmmB89mU5J7Fr3wkXxFprGTExhmGrv7hr1glUVUy5VQHQbfuTzxFjbH5VbnKluiDGvRNhgWIGfTrLGq16erekHTxXimlQLxwhgMYd7DV5UszC8aE5zvUTigLKJdIRmwRfa1rXArNCP82Xry7WPHpfpbVb47bzLPVdRM8dt6JqLy"/>
+<div class="absolute inset-0 bg-primary-container/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+</div>
+<!-- Right Column: Schedule -->
+<div class="lg:col-span-5 sticky top-32">
+<div class="bg-surface-container-highest p-1 bg-[url('https://www.transparenttextures.com/patterns/wood-pattern.png')] rounded-lg shadow-xl">
+<div class="bg-surface p-10 space-y-8">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="font-headline font-bold text-3xl text-primary leading-none">Weekly Schedule</h3>
+<p class="text-secondary font-medium mt-2">Active Field Operations</p>
+</div>
+<span class="material-symbols-outlined text-4xl text-outline-variant">calendar_today</span>
+</div>
+<div class="space-y-2">
+<!-- Mon -->
+<div class="flex items-center justify-between py-4 border-b border-outline-variant/30 hover:bg-surface-container-low px-4 -mx-4 transition-colors">
+<div class="flex flex-col">
+<span class="font-headline font-bold text-primary">Mon</span>
+<span class="text-on-surface-variant text-sm">Kit Check</span>
+</div>
+<div class="text-right">
+<span class="text-primary font-bold">4 PM</span>
+<div class="text-[10px] uppercase tracking-widest text-secondary">Basement HQ</div>
+</div>
+</div>
+<!-- Wed -->
+<div class="flex items-center justify-between py-4 border-b border-outline-variant/30 hover:bg-surface-container-low px-4 -mx-4 transition-colors">
+<div class="flex flex-col">
+<span class="font-headline font-bold text-primary">Wed</span>
+<span class="text-on-surface-variant text-sm">Route Planning</span>
+</div>
+<div class="text-right">
+<span class="text-primary font-bold">3 PM</span>
+<div class="text-[10px] uppercase tracking-widest text-secondary">Library Lab</div>
+</div>
+</div>
+<!-- Sat -->
+<div class="flex items-center justify-between py-6 bg-primary-container/5 px-4 -mx-4 border-l-4 border-primary">
+<div class="flex flex-col">
+<span class="font-headline font-bold text-primary">Sat</span>
+<span class="text-on-surface-variant font-medium">Main Expedition</span>
+</div>
+<div class="text-right">
+<span class="text-primary font-extrabold text-lg">8 AM</span>
+<div class="text-[10px] uppercase tracking-widest text-secondary">North Trailhead</div>
+</div>
+</div>
+<!-- Sun -->
+<div class="flex items-center justify-between py-4 border-b border-outline-variant/30 hover:bg-surface-container-low px-4 -mx-4 transition-colors">
+<div class="flex flex-col">
+<span class="font-headline font-bold text-primary">Sun</span>
+<span class="text-on-surface-variant text-sm">Photo Journaling</span>
+</div>
+<div class="text-right">
+<span class="text-primary font-bold">11 AM</span>
+<div class="text-[10px] uppercase tracking-widest text-secondary">Social Hub</div>
+</div>
+</div>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary font-headline font-bold uppercase tracking-widest text-sm hover:bg-primary-container transition-colors">
+                                Join Next Trip
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Featured Routes -->
+<section class="bg-surface-container py-24 px-8">
+<div class="max-w-7xl mx-auto space-y-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<h2 class="text-4xl font-headline font-bold text-primary max-w-md tracking-tight">Current Operational Routes</h2>
+<a class="font-headline font-bold uppercase tracking-widest text-secondary flex items-center gap-2 group" href="#">
+                        Explore Full Map
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-6 h-[700px]">
+<div class="md:col-span-2 lg:col-span-8 relative rounded-lg overflow-hidden group">
+<img alt="Valley Landscape" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="breathtaking aerial view of a deep canyon with a winding river and lush greenery in cinematic natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3btP2JhEN_cGdsGWkKPJ2Zflj27nAIut7a1YhXnPonA6GLqldqHNPyM2j5U1Ngbll8nzKlkMqfnNo7XY_GET0WERnA7MCK2JgHQMSxHOumk-a1xQ6PVILC2hN5gdAY37ZoxsNWawje4KwC9ss6KUW20PQ4OJDavbdO1QaV8guDxk35-I5ElshuEE2Sd1YEigKYTeK2mPWk7TccVjZRsPVcYGmbPpMBllndTYlU8zHUnJQ5WqD_YvfHCdMjrpEcz8tU2x-zHQDrnYz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 text-white">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-sm mb-4 inline-block">Advanced</span>
+<h4 class="text-4xl font-headline font-bold">The Blackwood Gorge</h4>
+<p class="max-w-sm text-on-primary-container/80 mt-2">A technical 12-mile ascent through dense pine thickets and glacial creek crossings.</p>
+</div>
+</div>
+<div class="md:col-span-2 lg:col-span-4 bg-primary p-8 flex flex-col justify-between rounded-lg relative overflow-hidden">
+<div class="topo-bg absolute inset-0 opacity-20"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-on-primary-container text-5xl mb-6" style="font-variation-settings: 'FILL' 1;">explore</span>
+<h4 class="text-white font-headline font-bold text-2xl">Pathfinder Program</h4>
+<p class="text-on-primary-container mt-4 leading-relaxed">Join our elite route-mapping division. Learn to use digital topographic tools and analog compass navigation in real-world scenarios.</p>
+</div>
+<button class="relative z-10 mt-8 font-headline font-bold text-white uppercase tracking-widest border-b border-on-primary-container pb-2 self-start hover:text-secondary-fixed transition-colors">
+                            Apply for 2024
+                        </button>
+</div>
+<div class="md:col-span-2 lg:col-span-4 relative rounded-lg overflow-hidden group">
+<img alt="Forest Trail" class="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0 group-hover:scale-105" data-alt="misty forest path winding through towering ancient trees with dappled sunlight filtering through the canopy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAHmvQWmLMGny77B9l2oO7mNGmNLJa7fYMuC07ZCEQywhsRKQJ_uNxo7VzI-nTEldiia2qKwz3SxYQwy7vomd76uGIh3NFokp-qcv34FnnLvtSv5ZwF_WALJ3lenFhghOxKZN-cq1rPwLJnyIp2-XWoIwucD_9vG0IISOCnUpQZFJuqGQalLEX8MPeUWX7sAfRCMRgwvgif4296Q5R-Vp36iLy3jkbtVz_k2ill1uf_ruTndgKqJ9pBinBmhooQTpILoRvB_z-ZIZ1"/>
+<div class="absolute inset-0 bg-secondary/30"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h4 class="text-white font-headline font-bold text-xl uppercase tracking-widest">Whisper Woods</h4>
+</div>
+</div>
+<div class="md:col-span-2 lg:col-span-4 relative rounded-lg overflow-hidden group">
+<img alt="Lakeside camp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="scenic lakeside campsite at dusk with a small campfire and glowing tent under a starry mountain sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxxiJTim7Lt2Ut9L-auL6Pk8O-WJXy3ObEzUg4hE3inXH1Kq_xi1NXtpR7LL0Q9MLjU0RBkuEsf4UaObkesH6k7uneUzkBZWIcue4rMIVuiat0c0dIZCZ83yg2YdVA_ZbThNpxpLhTy6Tru1UBkr_6tmXSfi53dBRAGObCSlL38pQdf5Of_7GYGEyQ0vXCP0HTOknaPYKoq-NS3Po-LIl7WrBVqws220s7OrK094t5PkLcxr56xLSrrCKf6ZtFvnZ8GCC1EbQmxAc3"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h4 class="text-white font-headline font-bold text-xl uppercase tracking-widest">Crystal Basin</h4>
+</div>
+</div>
+<div class="md:col-span-2 lg:col-span-4 bg-surface-container-highest p-8 rounded-lg flex flex-col justify-center text-center">
+<h4 class="text-primary font-headline font-bold text-2xl mb-2">48+ New Routes</h4>
+<p class="text-on-surface-variant text-sm mb-6">Added by club members this season</p>
+<div class="flex -space-x-3 justify-center">
+<div class="w-12 h-12 rounded-full border-4 border-surface overflow-hidden"><img alt="Avatar" data-alt="portrait of a young adventurer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_zlpV_tqcT8HBV5TdCYzcdKSuo_MOZmR0DkyfWT2ngxhyxbJ_OvNolB10G3nihtRn8TuFqFrMeM7WDaHMsnU-hx08SeHW7mrnkZtQZYyvAQ-QJ_YObZ-rpndoY2GWT80QIZsvkCmmFKaH56IfM92521DgtboOvE67dkDc930ZerTeVX8HWjhR1BAz9na9pwuzKulTA3tJYg518u0ewlAJUMzo19d_mibYAo-O-etiD4wul26gCHRl1tZf4gFlrP_eTPjgzEkBIHT2"/></div>
+<div class="w-12 h-12 rounded-full border-4 border-surface overflow-hidden"><img alt="Avatar" data-alt="portrait of an outdoor enthusiast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi7bTRpwkqBWm08MO734nx_Q4jJhnw-yoqmBmgQ6UGAA9qwNkiLS0oHaP-HzlVi9thJrGWJU7KyxSELFAL9jl_gWfm9xs8OyuUaNZ0MSsq7sfJkEVz6ZUQU_LkyAOaw2Lz1OpoLtPurcepSYpTwnK17cOhMFlb32KUVfDpUIWiz7HjbT4U5VIHERem7NKxR-pOk8MEKDtyjGTsf4ru5A6cucYIpGqU-aWH2NLix8c_NxqrX1lL_D8G5Op42IvYE2K_EVhbnVkfvxcB"/></div>
+<div class="w-12 h-12 rounded-full border-4 border-surface overflow-hidden"><img alt="Avatar" data-alt="portrait of a mountain climber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv9Br2yLLMG2TPhZJFyOYKyZDdF3CQk1FB87SHO2vq-jWTaWHmsWvSqsH9ASMooaEwpQgbEDbkIsZWagPnhldSuqGqh170UHUG-tIff2KuFTz5KyzODc8mGdzSpHJv0W_zjFd-Pu-zCRoqs2KWzD3kKWRlsfclixVTbFk2_j_d47Yxxzi7_3lWAL_X82rURcisHN8v_X3qbw3cfS1haByKJu6UG7AR9E0_cYMRpJozh8jj8QGOUANJxUfQgfKqyDf0wL9Xbp0GtojO"/></div>
+<div class="w-12 h-12 rounded-full border-4 border-surface bg-primary flex items-center justify-center text-white text-xs font-bold font-headline">+12</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 mt-auto bg-[#f1eee5] dark:bg-[#17340e] font-['Work_Sans'] text-sm tracking-wide">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-6">
+<div class="font-['Space_Grotesk'] uppercase tracking-widest text-[#2d4b22] dark:text-[#fcf9f0] font-bold">
+                Expeditionist
+            </div>
+<div class="flex gap-8 text-[#43483f] dark:text-[#c3c8bc]">
+<a class="hover:text-[#17340e] dark:hover:text-[#fcf9f0] underline decoration-[#79573f] transition-opacity hover:opacity-80" href="#">Contact</a>
+<a class="hover:text-[#17340e] dark:hover:text-[#fcf9f0] underline decoration-[#79573f] transition-opacity hover:opacity-80" href="#">Instagram</a>
+<a class="hover:text-[#17340e] dark:hover:text-[#fcf9f0] underline decoration-[#79573f] transition-opacity hover:opacity-80" href="#">Facebook</a>
+<a class="hover:text-[#17340e] dark:hover:text-[#fcf9f0] underline decoration-[#79573f] transition-opacity hover:opacity-80" href="#">Terms</a>
+</div>
+<div class="text-[#79573f] dark:text-[#ffd1b3]">
+                © 2024 Expeditionist Hiking Club. Built for the rugged.
+            </div>
+</div>
+</footer>
+</body></html>
